@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "outline": "#958ea0",
+                "on-tertiary": "#00363e",
+                "on-secondary": "#003640",
+                "inverse-primary": "#6d3bd7",
+                "on-primary-fixed-variant": "#5516be",
+                "secondary-container": "#03b5d3",
+                "on-primary-fixed": "#23005c",
+                "on-secondary-fixed": "#001f26",
+                "surface-container-highest": "#31353f",
+                "tertiary-fixed-dim": "#2fd9f4",
+                "surface-container": "#1c1f29",
+                "surface": "#0f131c",
+                "background": "#090D16",
+                "on-tertiary-fixed": "#001f25",
+                "surface-container-lowest": "#0a0e17",
+                "inverse-surface": "#dfe2ef",
+                "on-secondary-container": "#00424e",
+                "secondary-fixed": "#acedff",
+                "error": "#ffb4ab",
+                "on-surface-variant": "#94a3b8",
+                "secondary": "#4cd7f6",
+                "tertiary": "#2fd9f4",
+                "surface-bright": "#353943",
+                "on-secondary-fixed-variant": "#004e5c",
+                "primary-fixed": "#e9ddff",
+                "inverse-on-surface": "#2c303a",
+                "on-primary-container": "#e9ddff",
+                "error-container": "#93000a",
+                "surface-container-high": "#262a34",
+                "on-surface": "#f8fafc",
+                "outline-variant": "#334155",
+                "surface-variant": "#1e293b",
+                "on-error": "#690005",
+                "primary": "#d0bcff",
+                "on-tertiary-fixed-variant": "#004e5a",
+                "tertiary-fixed": "#a2eeff",
+                "surface-dim": "#0f131c",
+                "secondary-fixed-dim": "#4cd7f6",
+                "on-primary": "#3c0091",
+                "on-error-container": "#ffdad6",
+                "primary-container": "#a078ff",
+                "surface-tint": "#d0bcff",
+                "surface-container-low": "#121722",
+                "on-tertiary-container": "#002f36",
+                "tertiary-container": "#009fb4",
+                "primary-fixed-dim": "#d0bcff",
+                "on-background": "#f8fafc"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.375rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "gutter-desktop": "1.25rem",
+                "space-md": "0.75rem",
+                "space-sm": "0.5rem",
+                "space-base": "1rem",
+                "telemetry-rail-w": "4.5rem",
+                "space-xxs": "0.125rem",
+                "space-xs": "0.25rem",
+                "space-lg": "1.5rem",
+                "canvas-sidebar-w": "18rem",
+                "space-2xl": "3rem",
+                "space-xl": "2rem",
+                "gutter-mobile": "0.75rem",
+                "doc-max-width": "760px",
+                "gutter-canvas": "1.5rem"
+        },
+        "fontFamily": {
+                "headline-lg": ["Space Grotesk", "sans-serif"],
+                "headline-md": ["Space Grotesk", "sans-serif"],
+                "headline-sm": ["Space Grotesk", "sans-serif"],
+                "body-lg": ["Geist", "Inter", "sans-serif"],
+                "body-md": ["Geist", "Inter", "sans-serif"],
+                "body-sm": ["Geist", "Inter", "sans-serif"],
+                "telemetry-metric": ["JetBrains Mono", "monospace"],
+                "label-caps": ["JetBrains Mono", "monospace"],
+                "label-code": ["JetBrains Mono", "monospace"],
+                "terminal-md": ["JetBrains Mono", "monospace"],
+                "terminal-sm": ["JetBrains Mono", "monospace"]
+        }
+      }
+    }
+  }
+</script></head><body class="bg-[#090D16] font-body-md text-[#f8fafc] antialiased selection:bg-primary selection:text-[#090D16] min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 bg-[#0F172A]/90 backdrop-blur-xl border-b border-[#1E293B] shadow-[0_4px_20px_rgba(0,0,0,0.5)]"><div class="h-16 w-full px-gutter-canvas flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><div class="h-8 w-8 rounded-lg overflow-hidden flex items-center justify-center shrink-0 border border-[#334155]/60 bg-[#0D1321]"><img alt="LiveMirror Brand Logo" class="h-8 w-8 object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WlFBKGsMyVV7k0WlBW6G0zY9jh2chHyB2CEWVsXte7w-Rk9hALUO6r-wGR-AOvyW3VcL-gErvqWNIQxiWNQfjA7XQWKxlJyX1hnjY666Z5vKH1nkFuFo_0WipOYAwjbojtA9Eusby06o9oj2ERsHHkCdQj2ePUIUbfx2SU_B4JxvFCeSP2fuMh9YYNr2LfjT9B-De-i3Iws9qDyS5AQltDzVqqB-vFWgmmMb09YOj9zSQ_p36P_zst4iI"/></div><span class="font-headline-md text-headline-md font-bold text-[#f8fafc] tracking-tight">LiveMirror</span></div><nav class="hidden md:flex items-center gap-space-xs"><a aria-current="page" class="px-space-sm py-1.5 transition-colors bg-[#1E293B] text-[#f8fafc] font-semibold rounded-lg border border-[#334155]/50 text-sm" data-path="note-canvas" href="#">Note Canvas</a><a class="px-space-sm py-1.5 rounded-lg text-sm font-medium text-[#94a3b8] hover:text-[#f8fafc] hover:bg-[#1E293B]/60 transition-colors" data-path="mirror-stream" href="#">Mirror Stream</a><a class="px-space-sm py-1.5 rounded-lg text-sm font-medium text-[#94a3b8] hover:text-[#f8fafc] hover:bg-[#1E293B]/60 transition-colors" data-path="system-logs" href="#">Logs</a></nav></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-2xs px-space-sm py-1 rounded-full bg-[#161F30] text-[#4cd7f6] border border-[#03b5d3]/30 shadow-[0_0_12px_rgba(3,181,211,0.15)]"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#4cd7f6] opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-[#4cd7f6]"></span></span><span class="font-telemetry-metric text-[11px] font-semibold text-[#4cd7f6] uppercase tracking-wider">Companion Online</span></div><button class="p-space-2xs rounded-lg text-[#94a3b8] hover:text-[#f8fafc] hover:bg-[#1E293B] transition-colors border border-transparent hover:border-[#334155]" type="button"><span class="material-symbols-outlined text-[20px]">settings</span></button><div class="w-8 h-8 rounded-full bg-[#a078ff]/20 border border-[#a078ff]/50 flex items-center justify-center text-[#d0bcff] shadow-[0_0_10px_rgba(160,120,255,0.25)]"><span class="material-symbols-outlined text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-[#090D16] flex-1"><div class="flex flex-col w-full relative">
+<!-- Top Auxiliary Utility Bar -->
+<div class="w-full bg-[#0D1321]/95 backdrop-blur-md px-gutter-canvas py-2 flex items-center justify-between border-b border-[#1E293B] shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-2xs text-[#4cd7f6]">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span class="font-label-caps text-[11px] uppercase tracking-wider font-semibold">Vault: Encrypted / Watched</span>
+</div>
+<span class="font-label-code text-[11px] text-[#334155]">|</span>
+<div class="flex items-center gap-space-2xs text-[#94a3b8]">
+<span class="material-symbols-outlined text-[16px] text-[#d0bcff]">visibility</span>
+<span class="font-label-code text-[11px]">Surveillance: Active (100% Fidelity)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-space-2xs px-2.5 py-0.5 rounded-full bg-[#161F30] border border-[#a078ff]/30 text-[#d0bcff]">
+<span class="font-label-caps text-[10px] tracking-wider uppercase font-semibold">Focus Ratio: 12.4%</span>
+</div>
+<div class="flex items-center gap-space-2xs px-2.5 py-0.5 rounded-full bg-[#161F30] border border-[#2fd9f4]/30 text-[#2fd9f4]">
+<span class="font-label-caps text-[10px] tracking-wider uppercase font-semibold">Dopamine Waste: Moderate</span>
+</div>
+</div>
+</div>
+<!-- Main Canvas Section (Desktop split/centered sanctuary) -->
+<div class="w-full max-w-[1400px] mx-auto px-gutter-canvas py-space-xl flex flex-col lg:flex-row gap-space-xl justify-center items-start">
+<!-- Sidebar Meta Telemetry Panel (Left column on large viewports) -->
+<aside class="hidden xl:flex flex-col w-[260px] gap-space-md shrink-0 sticky top-24">
+<div class="bg-[#161F30] p-space-md rounded-xl border border-[#1E293B] shadow-[0_4px_24px_rgba(0,0,0,0.3)] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-2xs border-b border-[#1E293B]/70">
+<span class="font-label-caps text-[11px] font-bold text-[#94a3b8] uppercase tracking-wider">Document Stats</span>
+<span class="material-symbols-outlined text-[#d0bcff] text-[18px]">analytics</span>
+</div>
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-[#94a3b8]">Total Strokes:</span>
+<span class="font-telemetry-metric text-[14px] font-bold text-[#f8fafc]" id="stat-keystrokes">184</span>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-[#94a3b8]">Live Word Count:</span>
+<span class="font-telemetry-metric text-[14px] font-bold text-[#d0bcff]" id="stat-words">27</span>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-[#94a3b8]">Mouse Clicks:</span>
+<span class="font-telemetry-metric text-[14px] font-bold text-[#4cd7f6]" id="stat-clicks">0</span>
+</div>
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-[#94a3b8]">Hesitation Pauses:</span>
+<span class="font-telemetry-metric text-[14px] font-bold text-[#ffb4ab]" id="stat-pauses">3</span>
+</div>
+</div>
+<div class="mt-space-sm pt-space-sm bg-[#0D1321] p-space-xs rounded-lg border border-[#1E293B]">
+<div class="flex items-center gap-space-2xs text-[#4cd7f6] mb-1">
+<span class="material-symbols-outlined text-[14px]">psychology</span>
+<span class="font-label-caps text-[10px] uppercase font-bold tracking-wider">Psych Diagnostics</span>
+</div>
+<p class="font-body-sm text-[12px] text-[#94a3b8] leading-tight">
+            Subject appears to be actively procrastinating on high-value commitments under the guise of "brainstorming."
+          </p>
+</div>
+</div>
+<!-- Quick Vault Index Cards -->
+<div class="bg-[#161F30] p-space-md rounded-xl border border-[#1E293B] shadow-[0_4px_24px_rgba(0,0,0,0.3)] flex flex-col gap-space-xs">
+<span class="font-label-caps text-[11px] font-bold text-[#94a3b8] uppercase tracking-wider pb-space-2xs border-b border-[#1E293B]/70">Recent Drafts</span>
+<div class="p-2 rounded-lg bg-[#1E293B] text-[#f8fafc] font-body-sm flex items-center justify-between border border-[#334155]/60">
+<span class="truncate font-medium text-xs">Project Apollo (Active)</span>
+<span class="w-2 h-2 rounded-full bg-[#a078ff] shadow-[0_0_8px_#a078ff] animate-pulse"></span>
+</div>
+<div class="p-2 rounded-lg hover:bg-[#1E293B]/60 text-[#94a3b8] hover:text-[#f8fafc] font-body-sm flex items-center justify-between cursor-pointer transition-colors">
+<span class="truncate text-xs">Things I pretend to know</span>
+<span class="font-label-code text-[10px] text-[#64748B]">2d ago</span>
+</div>
+<div class="p-2 rounded-lg hover:bg-[#1E293B]/60 text-[#94a3b8] hover:text-[#f8fafc] font-body-sm flex items-center justify-between cursor-pointer transition-colors">
+<span class="truncate text-xs">Excuses for Slack latency</span>
+<span class="font-label-code text-[10px] text-[#64748B]">5d ago</span>
+</div>
+</div>
+</aside>
+<!-- Center Document Editor Canvas -->
+<main class="w-full max-w-doc-max-width flex flex-col gap-space-lg">
+<!-- Editor Card Container -->
+<div class="bg-[#161F30] rounded-xl border border-[#1E293B] shadow-[0_8px_32px_rgba(0,0,0,0.4)] p-space-lg md:p-space-xl flex flex-col relative transition-all duration-200 focus-within:border-[#a078ff]/60 focus-within:shadow-[0_8px_32px_rgba(160,120,255,0.12)]">
+<!-- Canvas Top Sub-header & Toolbar -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md pb-space-lg mb-space-md border-b border-[#1E293B]">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[#d0bcff] text-[22px]">description</span>
+<h1 class="font-headline-md text-headline-md font-bold text-[#f8fafc]">Note Canvas</h1>
+</div>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="w-2 h-2 rounded-full bg-[#2fd9f4] shadow-[0_0_8px_#2fd9f4]"></span>
+<span class="font-label-code text-[12px] text-[#94a3b8]" id="sync-status">Synced 12s ago · <span id="top-word-count">27 words</span></span>
+</div>
+</div>
+<!-- Subtle Toolbar Action Pills -->
+<div class="flex flex-wrap items-center gap-1 bg-[#0D1321] p-1.5 rounded-lg border border-[#1E293B]">
+<button class="p-1.5 text-[#94a3b8] hover:text-[#f8fafc] hover:bg-[#1E293B] rounded transition-colors" id="btn-bold" title="Bold" type="button">
+<span class="material-symbols-outlined text-[18px]">format_bold</span>
+</button>
+<button class="p-1.5 text-[#94a3b8] hover:text-[#f8fafc] hover:bg-[#1E293B] rounded transition-colors" id="btn-italic" title="Italic" type="button">
+<span class="material-symbols-outlined text-[18px]">format_italic</span>
+</button>
+<button class="p-1.5 text-[#94a3b8] hover:text-[#f8fafc] hover:bg-[#1E293B] rounded transition-colors" id="btn-bullet" title="Bullet List" type="button">
+<span class="material-symbols-outlined text-[18px]">format_list_bulleted</span>
+</button>
+<button class="p-1.5 text-[#94a3b8] hover:text-[#f8fafc] hover:bg-[#1E293B] rounded transition-colors" id="btn-checklist" title="Checklist" type="button">
+<span class="material-symbols-outlined text-[18px]">checklist</span>
+</button>
+<div class="h-4 w-[1px] bg-[#334155] mx-1"></div>
+<button class="px-2 py-1 font-label-code text-[11px] text-[#ffb4ab] hover:bg-[#93000a]/30 hover:text-white rounded transition-colors flex items-center gap-1" id="btn-clear" type="button">
+<span class="material-symbols-outlined text-[16px]">delete_sweep</span>
+<span>Clear</span>
+</button>
+</div>
+</div>
+<!-- Document Title Input (High Scale & Editorial) -->
+<div class="w-full mb-space-md">
+<input class="w-full font-headline-lg text-[28px] md:text-[32px] font-bold text-[#f8fafc] placeholder:text-[#494454] bg-transparent outline-none focus:outline-none border-b border-transparent focus:border-[#a078ff]/40 pb-1 transition-colors" id="doc-title" placeholder="Untitled Document..." type="text" value="Project Apollo: The Art of Doing Nothing"/>
+</div>
+<!-- Rich Interactive Textarea Editor -->
+<div class="w-full min-h-[440px] flex flex-col relative">
+<textarea class="w-full flex-1 resize-none bg-transparent font-body-lg text-[16px] text-[#e2e8f0] placeholder:text-[#494454] outline-none focus:outline-none leading-relaxed tracking-normal selection:bg-[#a078ff]/30 selection:text-[#f8fafc]" id="main-note-textarea" placeholder="Type your deepest thoughts, master plans, or grocery list here... (Warning: Your companion is watching every stroke)" rows="15">Project Apollo: Redefining productivity by doing absolutely nothing twice as fast. Key milestones:
+- Step 1: Stare at the screen for 20 minutes
+- Step 2: Open a new tab
+- Step 3: Wonder why the bot repeats everything I type</textarea>
+</div>
+<!-- Ambient Bottom Status Inside Note Card -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm pt-space-md mt-space-md border-t border-[#1E293B]">
+<div class="flex items-center gap-space-xs">
+<span class="px-2.5 py-0.5 rounded-full bg-[#a078ff]/15 border border-[#a078ff]/30 text-[#d0bcff] font-label-caps text-[10px] uppercase font-semibold">
+              Live Capture: Enabled
+            </span>
+<span class="text-[#64748B] font-label-code text-[11px] hidden sm:inline">
+              Keystroke echo lag: ~0.00ms
+            </span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-body-sm text-[12px] text-[#94a3b8]">Character count: <strong class="text-[#f8fafc] font-telemetry-metric font-bold" id="char-count">246</strong></span>
+<button class="px-3.5 py-1.5 bg-[#1E293B] hover:bg-[#334155] text-[#f8fafc] font-medium text-xs rounded-lg border border-[#334155] shadow-sm transition-all hover:-translate-y-0.5 flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[15px] text-[#d0bcff]">download</span>
+              Export Note
+            </button>
+</div>
+</div>
+</div>
+<!-- Satirical Productivity Insights Card Below Note -->
+<div class="w-full bg-[#161F30] rounded-xl p-space-lg border border-[#1E293B] shadow-[0_4px_20px_rgba(0,0,0,0.3)] flex flex-col md:flex-row gap-space-lg items-center justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#a078ff] to-[#6d3bd7] flex items-center justify-center text-white shrink-0 shadow-[0_0_20px_rgba(160,120,255,0.4)]">
+<span class="material-symbols-outlined text-[28px]">speed</span>
+</div>
+<div>
+<h4 class="font-headline-md text-base font-bold text-[#f8fafc]">Procrastination Quotient: Critical</h4>
+<p class="font-body-sm text-[13px] text-[#94a3b8]">The AI companion noted you spent 42 seconds contemplating the word "milestones".</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="px-space-md py-space-xs rounded-lg bg-[#0D1321] hover:bg-[#1E293B] text-[#d0bcff] hover:text-[#f8fafc] border border-[#a078ff]/30 font-medium text-xs transition-all flex items-center gap-space-2xs shadow-sm" id="appease-btn" type="button">
+<span class="material-symbols-outlined text-[16px] text-[#4cd7f6]">sentiment_satisfied</span>
+            Appease Subroutine
+          </button>
+</div>
+</div>
+</main>
+</div>
+<!-- FLOATING SATIRICAL CHAT WIDGET (Fixed Bottom-Right Corner) -->
+<aside class="fixed bottom-6 right-6 z-50 w-96 max-w-[calc(100vw-2rem)] rounded-xl shadow-[0_20px_40px_-10px_rgba(0,0,0,0.8),0_0_25px_rgba(160,120,255,0.25)] bg-[#0D1321] border border-[#a078ff]/40 overflow-hidden backdrop-blur-xl transition-all duration-300 transform translate-y-0" id="satirical-bot-widget">
+<!-- Chat Header: Glowing Energetic Purple/Cyan Gradient -->
+<div class="bg-gradient-to-r from-[#6d3bd7] via-[#a078ff] to-[#03b5d3] px-space-md py-space-sm flex items-center justify-between text-white select-none shadow-md">
+<div class="flex items-center gap-space-sm min-w-0">
+<!-- Bot Avatar with Glowing Ring -->
+<div class="relative shrink-0">
+<img alt="Definitely Not You Bot Avatar" class="w-10 h-10 rounded-full object-cover shadow-[0_0_12px_rgba(3,181,211,0.6)] ring-2 ring-[#4cd7f6] bg-[#090D16]" src="https://lh3.googleusercontent.com/aida/AEtjO1VBfHHpaOR1EWFhwkGj1nphMZB_va6dYOVi4SIJo9SCUGKkFgfILnPb8bsQocyRX-KB36f9_o1VO1V-NphC08H60saxakZ7LpymNAp2uj8HK97kGS2cr5J-yHDVX4fe5f883Psl-aV8Et96eNr2zF7DRzTP01h-QJ-cnqjxDC5SaMQsWScAbXdTEGS3iRzMXjcaMWlTWtn84Re3S5fQLyaQB9clhvm9Ajzdss32haPLTvqJPsBP3Zauag"/>
+<span class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-[#4cd7f6] rounded-full ring-2 ring-[#0D1321] flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-[#090D16] animate-ping"></span>
+</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-md text-sm font-bold text-white tracking-tight truncate drop-shadow-sm">Definitely Not You Bot</span>
+</div>
+<span class="font-label-code text-[10px] text-[#e9ddff] tracking-wide truncate">Satirical Parody AI v0.0.1</span>
+</div>
+</div>
+<!-- Right Header Actions: Live Badge & Control Icons -->
+<div class="flex items-center gap-space-2xs shrink-0">
+<div class="flex items-center gap-1.5 bg-black/40 px-2 py-0.5 rounded-full border border-white/10">
+<span class="w-2 h-2 rounded-full bg-[#4cd7f6] animate-pulse shadow-[0_0_8px_#4cd7f6]"></span>
+<span class="font-label-caps text-[10px] text-[#acedff] uppercase tracking-wider font-bold">Active</span>
+</div>
+<button class="p-1 hover:bg-white/20 rounded-md transition-colors text-white" id="minimize-bot-btn" title="Minimize/Expand" type="button">
+<span class="material-symbols-outlined text-[18px]" id="minimize-bot-icon">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Collapsible Container for Chat Body and Interactive Footer -->
+<div class="flex flex-col" id="bot-widget-content">
+<!-- Chat Body -->
+<div class="p-space-md bg-[#121722] flex flex-col gap-space-sm border-b border-[#1E293B]">
+<!-- Status line above message bubble with animated pulsing/bouncing dots -->
+<div class="flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-space-xs text-[#d0bcff]">
+<span class="font-label-code text-[11px] font-semibold tracking-wide flex items-center gap-1.5">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#a078ff] opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-[#d0bcff]"></span>
+</span>
+              Bot is typing &amp; watching mouse clicks...
+            </span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-[#d0bcff] animate-bounce [animation-delay:0ms]"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-[#d0bcff] animate-bounce [animation-delay:150ms]"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-[#d0bcff] animate-bounce [animation-delay:300ms]"></span>
+</div>
+</div>
+<!-- Terminal-like Satirical Message Echo Bubble -->
+<div class="p-2.5 rounded-lg bg-[#0D1321] border border-[#1E293B] shadow-inner flex flex-col gap-space-2xs transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1 text-[#4cd7f6]">
+<span class="material-symbols-outlined text-[14px]">psychiatry</span>
+<span class="font-label-caps text-[10px] font-bold uppercase tracking-wider">Echo Telemetry Terminal</span>
+</div>
+<span class="font-label-code text-[10px] text-[#64748B] font-medium" id="typing-latency">real-time sync</span>
+</div>
+<!-- Exact requested prompt label and live echo box -->
+<div class="bg-[#090D16] text-[#dfe2ef] p-2.5 rounded border border-[#1E293B] font-label-code text-[12px] leading-relaxed break-words shadow-inner min-h-[68px] max-h-[140px] overflow-y-auto">
+<div class="text-[#2fd9f4] text-[11px] font-label-code mb-1 pb-1 border-b border-[#1E293B]/70" id="bot-exact-requirement-copy">
+              [Real-time typing and live mouse click events will render here]
+            </div>
+<div class="text-[#94a3b8]" id="bot-echo-text">
+<span class="text-[#d0bcff] font-bold">Definitely Not You:</span>
+<span class="text-[#f8fafc]" id="bot-echo-content"> Project Apollo: Redefining productivity by doing absolutely nothing twice as fast...</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 text-[11px]">
+<span class="font-label-code text-[10px] text-[#4cd7f6] flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">verified_user</span>
+              Procrastination Judged
+            </span>
+<span class="font-label-code text-[10px] text-[#d0bcff] font-semibold transition-all" id="click-feedback-badge">
+              Listening for clicks...
+            </span>
+</div>
+</div>
+</div>
+<!-- Chat Footer: Live Mouse Click Log Ribbon -->
+<div class="w-full bg-[#090D16] px-space-md py-2 flex items-center justify-between transition-colors duration-150 select-none cursor-default border-t border-[#1E293B]" id="mouse-log-ribbon">
+<div class="flex items-center gap-space-xs overflow-hidden">
+<span class="relative flex h-2 w-2 shrink-0">
+<span class="absolute inline-flex h-full w-full rounded-full bg-[#03b5d3] opacity-0 transition-opacity" id="click-ping"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-[#4cd7f6]"></span>
+</span>
+<span class="font-label-code text-[11px] text-[#4cd7f6] font-mono tracking-wide truncate" id="mouse-event-display">
+            Mouse: [Listening for first click...]
+          </span>
+</div>
+<div class="shrink-0 pl-2">
+<span class="font-label-caps text-[10px] bg-[#161F30] border border-[#03b5d3]/40 text-[#4cd7f6] px-2 py-0.5 rounded uppercase font-bold" id="click-badge-counter">
+            0 Hits
+          </span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Interactive JavaScript Handling Typing Echo & Mouse Click Event Tracker -->
+<script>
+    (function initLiveMirrorCompanion() {
+      const textarea = document.getElementById('main-note-textarea');
+      const botEchoContent = document.getElementById('bot-echo-content');
+      const mouseEventDisplay = document.getElementById('mouse-event-display');
+      const mouseLogRibbon = document.getElementById('mouse-log-ribbon');
+      const clickPing = document.getElementById('click-ping');
+      const clickBadgeCounter = document.getElementById('click-badge-counter');
+      const clickFeedbackBadge = document.getElementById('click-feedback-badge');
+      const statClicks = document.getElementById('stat-clicks');
+      const statKeystrokes = document.getElementById('stat-keystrokes');
+      const statWords = document.getElementById('stat-words');
+      const topWordCount = document.getElementById('top-word-count');
+      const charCount = document.getElementById('char-count');
+      const syncStatus = document.getElementById('sync-status');
+      const minimizeBtn = document.getElementById('minimize-bot-btn');
+      const minimizeIcon = document.getElementById('minimize-bot-icon');
+      const widgetContent = document.getElementById('bot-widget-content');
+      const clearBtn = document.getElementById('btn-clear');
+      const appeaseBtn = document.getElementById('appease-btn');
+
+      let clickCount = 0;
+      let keystrokeCount = 184;
+
+      // 1. Live Typing Echo
+      if (textarea && botEchoContent) {
+        textarea.addEventListener('input', (e) => {
+          const val = e.target.value;
+          keystrokeCount++;
+          if (statKeystrokes) statKeystrokes.textContent = keystrokeCount;
+
+          if (val.trim().length === 0) {
+            botEchoContent.textContent = " [User deleted everything in despair]";
+          } else {
+            // Trim long lines for compact satirical display
+            const truncated = val.length > 140 ? val.substring(0, 140) + "..." : val;
+            botEchoContent.textContent = " " + truncated;
+          }
+
+          // Update word & character metrics
+          const words = val.trim().length > 0 ? val.trim().split(/\s+/).length : 0;
+          if (statWords) statWords.textContent = words;
+          if (topWordCount) topWordCount.textContent = words + " words";
+          if (charCount) charCount.textContent = val.length;
+          if (syncStatus) syncStatus.innerHTML = 'Synced just now · <span id="top-word-count">' + words + ' words</span>';
+        });
+      }
+
+      // 2. Real-Time Mouse Click Event Tracker (Anywhere on page)
+      window.addEventListener('click', (e) => {
+        clickCount++;
+        const x = Math.round(e.clientX);
+        const y = Math.round(e.clientY);
+
+        // Update footer log ribbon text
+        if (mouseEventDisplay) {
+          mouseEventDisplay.textContent = `Mouse: [Left Click at (${x}, ${y})]`;
+        }
+
+        // Update stats
+        if (clickBadgeCounter) {
+          clickBadgeCounter.textContent = `${clickCount} Hits`;
+        }
+        if (statClicks) {
+          statClicks.textContent = clickCount;
+        }
+        if (clickFeedbackBadge) {
+          clickFeedbackBadge.textContent = `Caught @ (${x}, ${y})`;
+        }
+
+        // Visual flash effect on mouse-log-ribbon
+        if (mouseLogRibbon) {
+          mouseLogRibbon.classList.add('bg-[#1E293B]');
+          setTimeout(() => {
+            mouseLogRibbon.classList.remove('bg-[#1E293B]');
+          }, 140);
+        }
+
+        // Trigger ping ripple
+        if (clickPing) {
+          clickPing.classList.remove('opacity-0');
+          clickPing.classList.add('animate-ping', 'opacity-80');
+          setTimeout(() => {
+            clickPing.classList.remove('animate-ping', 'opacity-80');
+            clickPing.classList.add('opacity-0');
+          }, 400);
+        }
+      });
+
+      // 3. Toolbar helpers
+      if (clearBtn && textarea) {
+        clearBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          textarea.value = '';
+          textarea.dispatchEvent(new Event('input'));
+          textarea.focus();
+        });
+      }
+
+      // 4. Minimize / Expand companion widget
+      if (minimizeBtn && widgetContent && minimizeIcon) {
+        let isMinimized = false;
+        minimizeBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          isMinimized = !isMinimized;
+          if (isMinimized) {
+            widgetContent.classList.add('hidden');
+            minimizeIcon.textContent = 'expand_less';
+          } else {
+            widgetContent.classList.remove('hidden');
+            minimizeIcon.textContent = 'expand_more';
+          }
+        });
+      }
+
+      // 5. Satirical Appease Button
+      if (appeaseBtn && botEchoContent) {
+        appeaseBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          botEchoContent.textContent = " Definitely Not You: AI subroutine successfully appeased with virtual compliance cookies.";
+          if (clickFeedbackBadge) {
+            clickFeedbackBadge.textContent = "Threat level lowered to 98%";
+          }
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-[#0D1321] border-t border-[#1E293B] shadow-[0_-4px_16px_rgba(0,0,0,0.4)] py-space-lg mt-space-2xl"><div class="w-full px-gutter-canvas flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-[12px] text-[#94a3b8]"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-[#4cd7f6] animate-pulse"></span><span class="font-label-caps text-[10px] text-[#94a3b8] uppercase tracking-widest font-semibold">LIVE-SURVEILLANCE ENGINE v2.4.0</span></div><div class="flex items-center gap-space-lg font-label-code text-[11px]"><a class="text-[#94a3b8] hover:text-[#d0bcff] transition-colors" href="#">Diagnostics</a><a class="text-[#94a3b8] hover:text-[#d0bcff] transition-colors" href="#">Privacy Manifesto</a><a class="text-[#94a3b8] hover:text-[#4cd7f6] transition-colors" href="#">Appease Subroutine</a></div></div></footer></body></html>
